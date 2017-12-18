@@ -1,0 +1,38 @@
+
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+	body
+		nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+			.container
+				a.navbar-brand(href='#') Horce Racing
+				|     
+				#navbarsExampleDefault.collapse.navbar-collapse
+					ul.navbar-nav.mr-auto
+						li.nav-item(class=title=='Home' ? 'active' : undefined)
+							a.nav-link(href='/')
+								| Home 
+								span.sr-only (current)
+						|             
+						li.nav-item(class=title=='Setup' ? 'active' : undefined)
+							a.nav-link(href='/setup') Setup
+						|             
+						li.nav-item(class=title=='Support' ? 'active' : undefined)
+							a.nav-link(href='/support') Support
+						|
+						li.nav-item(class=title=='Contact' ? 'active' : undefined)
+							a.nav-link(href='/contact') Contact
+		.container
+			br
+			br
+			br
+			h1 #{title}
+			block content
+
+		.container
+			hr
+			footer
+				p Horse Racing &copy; 2017

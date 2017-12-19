@@ -6,7 +6,8 @@ const SerialPort = require('serialport');
 let message = 'hello';
 
 // create port to listen to Arduino
-const port = new SerialPort('/dev/tty.wchusbserial1410');
+// This port comes from environment variable
+const port = new SerialPort(process.env.UART_PORT);
 
 // start listening to and collecting data being emitted from Arduino
 console.log('Starting up serial host...');

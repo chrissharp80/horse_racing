@@ -1,8 +1,5 @@
 extends layout
 
-block head_extension
-		script(src='/js/index.js')
-
 block content
 	.jumbotron
 		.container
@@ -12,8 +9,8 @@ block content
 					p
 						| Here you can monitor the contestants, tweak settings,
 						| and perform other adminstrative actions.
-					p#message
-						//- | #{message}
+					p
+						| #{message}
 					p
 						a.btn.btn-primary.btn-lg(href='#') Setup Wizard
 				.col-md-7

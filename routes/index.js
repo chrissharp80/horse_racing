@@ -23,4 +23,8 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.get('/message', (req, res) => {
+    res.status(200).send({message: message});
+})
+
 module.exports = router;
